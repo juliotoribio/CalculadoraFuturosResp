@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cripto Calculadora</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="Title">
+            <h1><span class="tu">Tu</span> <span class="cripto">Cripto</span> <br><span class="calculadora">Calculadora</span></h1>
+        </div>
+      
+        <form id="form">
+            <div class="form-general-group">
+                <label>
+                    <input type="text" id="precioEntrada" class="form-control" placeholder="Precio de Entrada" onblur="formatCurrency(this)">
+                </label>
+                <label>
+                    <input type="number" id="numeroEntradas" class="form-control" placeholder="Número de Entradas">
+                </label>
+                <label>
+                    <input type="text" id="rangoEntrada" class="form-control" placeholder="Rango de Entrada (%)" onblur="formatPercentage(this)">
+                </label>
+
+                <div class="form-group">
+                    <div class="form-row">
+                        <input type="text" id="inversionTotal" class="form-control" placeholder="Inversión Total" onblur="formatCurrency(this)">
+                        <div class="custom-select-wrapper">
+                            <select id="tipoOperacion" class="form-control small-select">
+                                <option value="long">Long</option>
+                                <option value="short">Short</option>
+                            </select>
+                            <span class="material-symbols-outlined">arrow_drop_down</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="button-control" onclick="generarTablaEntradas()">Generar Tabla</button>
+        </form>
+        <div class="Desarrollador">Desarrollado por<a href="https://www.instagram.com/julioindigital/" class="julioindigital">@julioindigital</a></div>
+    </div>
+
+    <div id="container2" class="container2" style="display: none;">
+        <div class="subcontainer2">
+            <h2 class="Titulocontainer2">Tabla de Entradas</h2>
+            <button type="button" class="button-control2" onclick="calcularEntradas()">Calcular Entradas</button>
+        </div>
+        <div id="tablaEntradasContainer" class="tablaEntradasContainer"></div>
+    </div>
+
+
+
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,340 @@
+@font-face {
+    font-family: 'PangramSans';
+    src: url('../static/fonts/PangramSans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PangramSansBold';
+    src: url('../static/fonts/PangramSans-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PangramSansBoldItalic';
+    src: url('../static/fonts/PangramSans-Bold-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PangramSansBoldItalic2';
+    src: url('../static/fonts/PangramSans-Bold-Italic2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'PangramSans', sans-serif;
+    background: url('/static/Back4.jpg') no-repeat center center fixed;
+    background-color:#000;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center;*/
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/static/Back4.jpg') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(5px); /* Ajusta el valor según la intensidad del blur deseado */
+    z-index: -1;
+}
+
+.container {
+    font-family: 'PangramSans', sans-serif;
+    width: 400px;
+    height: 590px;
+    margin: 50px;
+    padding: 40px;
+    background: white;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10.2px);
+    border: 1px solid rgb(210, 217, 238);
+    border-radius: 10px;
+}
+
+.container2 {
+    font-family: 'PangramSans', sans-serif;
+    width: 90%;
+    height: 90%;
+    margin: 50px 50px 0px 0px;
+    padding: 40px;
+    background: white;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10.2px);
+    border: 1px solid rgb(210, 217, 238);
+    border-radius: 10px;
+}
+
+.subcontainer2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px;
+}
+
+.Title {
+    margin-bottom: 30px;
+}
+
+.tu {
+    font-family: 'PangramSansBold', sans-serif;
+    letter-spacing: -.0.07em;
+    font-size: 60px;
+    line-height: 70%;
+}
+
+.cripto {
+    font-family: 'PangramSansBold', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -.0.07em;
+    font-size: 70px;
+    line-height: 70%;
+}
+
+.calculadora {
+    font-family: 'PangramSansBoldItalic2';
+    text-transform: uppercase;
+    letter-spacing: -.0.07em;
+    font-size: 55px;
+    line-height: 70%;
+}
+
+form label {
+    display: block;
+    margin-bottom: 7px;
+}
+
+.form-label {
+    font-size: 18px;
+    color: #999;
+    margin-bottom: 10px;
+    display: block;
+}
+
+form input,
+form select {
+    width: 380px;
+    padding: 10px;
+    border: 0px solid #ddd;
+    border-radius: 8px;
+}
+
+.form-control {
+    height: 50px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    background-color: rgb(245, 246, 252);
+}
+
+input#precioEntrada:focus {
+    border: 1px solid rgba(119, 128, 160, 0.5);
+}
+
+.form-general-group {
+    margin-bottom: 0px;
+}
+
+/* Contenedor para el select y el icono */
+.custom-select-wrapper {
+    position: relative;
+    width: 80%;
+}
+
+.small-select {
+    font-family: 'PangramSans';
+    font-size: 20px;
+    width: 100%; /* Ancho completo para el select dentro del contenedor */
+    height: 40px;
+    padding: 0 5px 0 5px;
+    border-radius: 30px;
+    background-color: #1E82DE;
+    color: white;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    text-align: center;
+    margin: 0px -10px 0px -10px;
+    box-shadow: rgba(0, 0, 0, 0.075) 0px 6px 10px;
+    -webkit-appearance: none; /* Elimina la flecha por defecto en WebKit */
+    -moz-appearance: none; /* Elimina la flecha por defecto en Firefox */
+    appearance: none; /* Elimina la flecha por defecto en todos los navegadores compatibles */
+}
+
+.material-symbols-outlined {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Evita que el icono interfiera con la selección del select */
+    color: rgba(255, 255, 255);
+    font-size: 30px; /* Aumenta el tamaño del icono */
+}
+
+.small-select option {
+    color: rgba(255, 255, 255);
+}
+
+/* Estilo para alinear los elementos en una fila */
+.form-row {
+    display: flex;
+    align-items: center;
+    background-color: #f5f6fc;
+    border-radius: 8px;
+    padding: 0px;
+    margin-bottom: 20px;
+    background-position: right 12px center;
+}
+
+/* Estilo para el texto del placeholder */
+::placeholder {
+    font-family: 'PangramSans', sans-serif;
+    font-size: 22px; /* Tamaño del texto del placeholder */
+    color: rgb(119, 128, 160);
+}
+
+/* Estilo para el texto del placeholder */
+input {
+    font-family: 'PangramSans', sans-serif;
+    font-size: 22px; /* Tamaño del texto del placeholder */
+    color: rgb(119, 128, 160);
+    border: 0px solid #ddd;
+}
+
+.button-control {
+    font-family: 'PangramSans', sans-serif;
+    font-size: 25px;
+    line-height: 150%;
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+    border-radius: 12px;
+    font-weight: 600;
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 2rem;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+}
+
+.button-control2 {
+    width: 40%;
+    font-family: 'PangramSans', sans-serif;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    background-color: #fff;
+    color: 000;
+    cursor: pointer;
+    border: 1px solid #000;
+}
+
+.Titulocontainer2 {
+    width: 50%;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 0px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 0px solid #ddd;
+}
+
+input.porcentaje.form-control {
+    font-family: 'PangramSans', sans-serif;
+    font-size: 25px;
+    text-align: center;
+}
+
+
+td{
+    font-family: 'PangramSans', sans-serif;
+    font-size: 25px;
+}
+
+
+th {
+    background-color: #000000;
+    color: white;
+}
+
+tr{
+    border: 0px solid #ddd;
+}
+
+.sumaporcent {
+    font-size: 25px;
+    margin: 10px 0 10px 0;
+}
+
+.porcentajeent {
+    font-family: 'PangramSansBold', sans-serif;
+    font-size: 30px;
+}
+
+.sumaPorcentajesContainergeneral {
+    margin: 10px 0 20px 0;
+}
+
+.Title2 {
+    font-family: 'PangramSans', sans-serif;
+    font-size: 25px;
+    margin: 10px 0 20px 0;
+}
+
+div#porcentajesContainer {
+    font-family: 'PangramSans', sans-serif;
+    margin: 20px 0 20px 0;
+}
+
+
+th.entrada{
+    border-radius: 8px 0px 0px 0px;
+}
+
+
+th.inversion{
+    border-radius: 0px 8px 0px 0px;
+}
+
+div#tablaEntradasContainer {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+
+.Desarrollador { 
+    text-align: center;
+}
+
+.julioindigital{
+    color:#000;
+}
