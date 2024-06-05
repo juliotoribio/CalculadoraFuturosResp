@@ -16,6 +16,9 @@ def calcular():
     inversion_total = data['inversion_total']
     porcentajes_distribucion = data['porcentajes_distribucion']
 
+    if numero_entradas > 10:
+        return jsonify({"error": "El número de entradas no puede ser mayor a 10."}), 400
+
     precios_entrada = []
     inversiones_por_entrada = []
 
