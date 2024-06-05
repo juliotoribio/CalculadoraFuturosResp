@@ -149,6 +149,13 @@ input#precioEntrada:focus {
     border: 1px solid rgba(119, 128, 160, 0.5);
 }
 
+<<<<<<< HEAD
+input#inversionTotal {
+    width: 250px;
+}
+
+=======
+>>>>>>> a0cf99fd52ffa0e15a9fe6a685d410c61390da18
 .form-general-group {
     margin-bottom: 0px;
 }
@@ -156,7 +163,11 @@ input#precioEntrada:focus {
 /* Contenedor para el select y el icono */
 .custom-select-wrapper {
     position: relative;
+<<<<<<< HEAD
+    width: 100%;
+=======
     width: 80%;
+>>>>>>> a0cf99fd52ffa0e15a9fe6a685d410c61390da18
 }
 
 .small-select {
