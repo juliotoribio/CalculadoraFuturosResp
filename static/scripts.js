@@ -38,10 +38,9 @@ function generarTablaEntradas() {
         const thead = document.createElement('thead');
         thead.innerHTML = `
             <tr>
-                <th class="entrada">Nro.</th>
-                <th>Entrada</th>
+                <th class="entrada">#</th>
                 <th>Precio</th>
-                <th>Porcentaje de Entrada</th>
+                <th>%Entrada</th>
                 <th class="inversion">Inversión</th>
             </tr>
         `;
@@ -59,9 +58,8 @@ function generarTablaEntradas() {
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td><input type="checkbox" class="entrada-checkbox" onchange="calcularPromedio()"></td>
-                <td>${i + 1}</td>
                 <td id="precioEntrada${i}">${formatCurrency(precio)}</td>
-                <td><input type="text" class="porcentaje form-control" placeholder="Porcentaje" onblur="validateAndFormatPercentage(this)" oninput="actualizarSumaPorcentajes()"></td>
+                <td><input type="text" class="porcentaje form-control" placeholder="%" onblur="validateAndFormatPercentage(this)" oninput="actualizarSumaPorcentajes()"></td>
                 <td id="inversionEntrada${i}"></td>
             `;
             tbody.appendChild(row);
